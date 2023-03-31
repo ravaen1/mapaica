@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_cb8e8ca385b719f07cbd74269639e8ae {
+                #map_f9194a6987cbe8a5880a1fd39e7ea3f8 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,16 +39,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_cb8e8ca385b719f07cbd74269639e8ae" ></div>
+            <div class="folium-map" id="map_f9194a6987cbe8a5880a1fd39e7ea3f8" ></div>
         
 </body>
 <script>
     
     
-            var map_cb8e8ca385b719f07cbd74269639e8ae = L.map(
-                "map_cb8e8ca385b719f07cbd74269639e8ae",
+            var map_f9194a6987cbe8a5880a1fd39e7ea3f8 = L.map(
+                "map_f9194a6987cbe8a5880a1fd39e7ea3f8",
                 {
-                    center: [-14.048148, -75.748584],
+                    center: [-14.048148, -75.739941],
                     crs: L.CRS.EPSG3857,
                     zoom: 12,
                     zoomControl: true,
@@ -60,10 +60,31 @@
 
         
     
-            var tile_layer_73cf2e1cd416d67e61cc4da85faf3339 = L.tileLayer(
+            var tile_layer_e75161cf2a17b738336726b7c5377403 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_cb8e8ca385b719f07cbd74269639e8ae);
+            ).addTo(map_f9194a6987cbe8a5880a1fd39e7ea3f8);
         
+    
+            var marker_93e134ccdecc2a9ed2da7567938f7891 = L.marker(
+                [-14.076831, -75.748412],
+                {}
+            ).addTo(map_f9194a6987cbe8a5880a1fd39e7ea3f8);
+        
+    
+        var popup_5af2df6a66587bd94fcb563ec432a09b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d42256b3ab1a9bb0e2c87881f65b7c5 = $(`<div id="html_0d42256b3ab1a9bb0e2c87881f65b7c5" style="width: 100.0%; height: 100.0%;">hablen perrxs nos vemos en el bruce!!</div>`)[0];
+                popup_5af2df6a66587bd94fcb563ec432a09b.setContent(html_0d42256b3ab1a9bb0e2c87881f65b7c5);
+            
+        
+
+        marker_93e134ccdecc2a9ed2da7567938f7891.bindPopup(popup_5af2df6a66587bd94fcb563ec432a09b)
+        ;
+
+        
+    
 </script>
 </html>
