@@ -3,14 +3,23 @@
 <head>
     <meta charset="utf-8">
     <title>Formulario de ubicación</title>
+    <script>
+        function enviarFormulario() {
+            const latitud = document.getElementById('latitud').value;
+            const longitud = document.getElementById('longitud').value;
+            const url = `/guardar_ubicacion?latitud=${latitud}&longitud=${longitud}`;
+            fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById('mapa').innerHTML = data);
+        }
+    </script>
 </head>
 <body>
-    <form action="/guardar_ubicacion" method="POST">
-        <label for="latitud">Latitud:</label>
-        <input type="text" id="latitud" name="latitud" required><br><br>
-        <label for="longitud">Longitud:</label>
-        <input type="text" id="longitud" name="longitud" required><br><br>
-        <input type="submit" value="Enviar">
-    </form>
+    <label for="latitud">Latitud:</label>
+    <input type="text" id="latitud" required><br><br>
+    <label for="longitud">Longitud:</label>
+    <input type="text" id="longitud" required><br><br>
+    <button onclick="enviarFormulario()">Enviar</button>
+    <div id="mapa"></div>
 </body>
 </html>
